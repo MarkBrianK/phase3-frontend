@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #fefefe;
 }
 
 .App-logo {
@@ -36,3 +37,19 @@
     transform: rotate(360deg);
   }
 }
+.nav-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1c0606;
+  height: 60px;
+
+}
+.card{
+  background-color: #121212;
+  color: #ffffffa6;
+  width: 20rem;
+  margin-left: 600px;
+  margin-top: 60px;
+}
+
