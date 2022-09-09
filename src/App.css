@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #fefefe;
+  background-color: rgb(240, 227, 227);
 }
 
 .App-logo {
@@ -42,7 +42,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: #2e0505;
-  height: 60px;
+  height: 80px;
 
 }
 .card{
@@ -70,4 +70,25 @@
 .hearts{
   font-weight: bold;
   color: rgb(117, 9, 9);
+}
+.homepage{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.speed{
+  margin-top: 2px;
+}
+.speed img{
+  width: 80%;
+  border-radius: 16px;
+  float: right;
+}
+.emoji {
+  width: 10%;
+  border-radius: 70%;
+}
+.health img {
+  width: 80%;
+  float: left;
+  border-radius: 16px;
 }
