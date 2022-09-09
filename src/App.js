@@ -5,6 +5,7 @@ import Homepage from "./Pages/HomePage"
 import DriverPage from "./Pages/DriverPage"
 import GaragePage from "./Pages/GaragePage"
 import VehiclePage from "./Pages/VehiclePage";
+import Footer from "./Components/Footer"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
 
       </Switch>
+      <Footer />
       </BrowserRouter>
 
     </div>

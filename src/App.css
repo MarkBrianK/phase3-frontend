@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1c0606;
+  background-color: #2e0505;
   height: 60px;
 
 }
@@ -51,5 +51,23 @@
   width: 20rem;
   margin-left: 600px;
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  font-size: larger;
+
+}
+.hearts{
+  font-weight: bold;
+  color: rgb(117, 9, 9);
+}

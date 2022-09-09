@@ -1,8 +1,11 @@
 import React from "react";
+import "../App.css"
 function HomePage(){
     return(
-        <div>
-            <h1>wabebee</h1>
+        < div className="homepage">
+
+
+            </div>
         </div>
     )
 }
