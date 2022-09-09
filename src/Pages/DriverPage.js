@@ -1,6 +1,6 @@
 import React, {useEffect, useState}from "react";
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button'
+//import Button from 'react-bootstrap/Button'
 import "../App.css"
 
 function DriverPage(){
@@ -21,8 +21,8 @@ function DriverPage(){
           return(<div>
         <Card className="card" style={{ width: '18rem' }}>
           <Card.Body>
-            <Card.Title>{driver.name}</Card.Title>
-            <Card.Text>{driver.licence_number}</Card.Text>
+            <Card.Title> Name:    {driver.name}</Card.Title>
+            <Card.Text>Licence Number:    {driver.licence_number}</Card.Text>
           </Card.Body>
         </Card>
           </div>

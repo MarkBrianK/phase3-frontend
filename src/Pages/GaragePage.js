@@ -31,10 +31,10 @@ function GaragePage(){
           return(<div>
         <Card className="card" style={{ width: '18rem' }}>
           <Card.Body>
-            <Card.Title>{garage.name}</Card.Title>
-            <Card.Text>{garage.location}</Card.Text>
-            <Card.Text>{garage.mechanic}</Card.Text>
-            <Card.Text>{garage.certification_number}</Card.Text>
+            <Card.Title>Name:   {garage.name}</Card.Title>
+            <Card.Text>Location:    {garage.location}</Card.Text>
+            <Card.Text>Lead Mechanic:   {garage.mechanic}</Card.Text>
+            <Card.Text> Garage certification number:    {garage.certification_number}</Card.Text>
           </Card.Body>
           <Button onClick={() => {
                   deleteGarage(garage.id) }}>Delete</Button>

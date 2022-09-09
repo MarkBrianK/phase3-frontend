@@ -20,15 +20,15 @@ function VehiclePage(){
           return(<div>
         <Card className="card" style={{ width: '80rem' }}>
           <Card.Body>
-            <Card.Title>{vehicle.model}</Card.Title>
-            <Card.Text>{vehicle.manufacture_year}</Card.Text>
-            <Card.Text>{vehicle.last_service}</Card.Text>
-            <Card.Text>{vehicle.next_service}</Card.Text>
-            <Card.Text>{vehicle.catlytic_converter}</Card.Text>
-            <Card.Text>{vehicle.vehicle_insurance}</Card.Text>
-            <Card.Text>{vehicle.driver_id}</Card.Text>
-            <Card.Text>{vehicle.garage_id}</Card.Text>
-            <Card.Text>{vehicle.vehicle_registration}</Card.Text>
+            <Card.Title> Model:   {vehicle.model}</Card.Title>
+            <Card.Text> Year of Manufacture:   {vehicle.manufacture_year}</Card.Text>
+            <Card.Text> Last service:  {vehicle.last_service}</Card.Text>
+            <Card.Text>Next sevice:     {vehicle.next_service}</Card.Text>
+            <Card.Text>Catalytic converter:     {vehicle.catlytic_converter}</Card.Text>
+            <Card.Text> Vehicle insurance:    {vehicle.vehicle_insurance}</Card.Text>
+            <Card.Text>Owner:  {vehicle.driver_id}</Card.Text>
+            <Card.Text>Garage serviced:   {vehicle.garage_id}</Card.Text>
+            <Card.Text>Vehicle Registratio:   {vehicle.vehicle_registration}</Card.Text>
           </Card.Body>
         </Card>
           </div>
