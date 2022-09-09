@@ -5,7 +5,7 @@ function HomePage(){
         < div className="homepage">
 
 
-            </div>
+        
         </div>
     )
 }
