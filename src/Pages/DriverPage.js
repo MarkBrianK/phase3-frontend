@@ -14,16 +14,7 @@ function DriverPage(){
 
         })
     }, [])
-    function deleteDriver(id){
-        fetch(`https://backendapi3.herokuapp.com/drivers/${id}`,{
-            method: "DELETE",
-        })
-        .then(r => r.json())
-        .then(() => {
-            const deleting = drivers.filter((driver) => driver.id !== id)
-                setDriver(deleting)
-            })
-      }
+
     return(
         <div>
             {drivers.map((driver)=>{
@@ -33,8 +24,6 @@ function DriverPage(){
             <Card.Title>{driver.name}</Card.Title>
             <Card.Text>{driver.licence_number}</Card.Text>
           </Card.Body>
-          <Button onClick={() => {
-                  deleteDriver(driver.id) }}>Delete</Button>
         </Card>
           </div>
 

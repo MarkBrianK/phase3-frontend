@@ -14,21 +14,11 @@ function VehiclePage(){
 
         })
     }, [])
-    function deleteVehicle(id){
-        fetch(`https://backendapi3.herokuapp.com/vehicles/${id}`,{
-            method: "DELETE",
-        })
-        .then(r => r.json())
-        .then(() => {
-            const deleting = vehicles.filter((garage) => garage.id !== id)
-                setVehicle(deleting)
-            })
-      }
     return(
         <div>
             {vehicles.map((vehicle)=>{
           return(<div>
-        <Card className="card" style={{ width: '18rem' }}>
+        <Card className="card" style={{ width: '80rem' }}>
           <Card.Body>
             <Card.Title>{vehicle.model}</Card.Title>
             <Card.Text>{vehicle.manufacture_year}</Card.Text>
@@ -40,8 +30,6 @@ function VehiclePage(){
             <Card.Text>{vehicle.garage_id}</Card.Text>
             <Card.Text>{vehicle.vehicle_registration}</Card.Text>
           </Card.Body>
-          <Button onClick={() => {
-                  deleteVehicle(vehicle.id) }}>Delete</Button>
         </Card>
           </div>
 
