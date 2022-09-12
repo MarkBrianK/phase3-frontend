@@ -1,7 +1,9 @@
 import React, {useEffect, useState}from "react";
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button'
+//import Card from 'react-bootstrap/Card';
+//import Button from 'react-bootstrap/Button'
+import { Table, TableCell, TableRow, TableHead, TableBody } from "@mui/material";
 import "../App.css"
+
 
 function VehiclePage(){
     const [vehicles, setVehicle] = useState([])
@@ -14,11 +16,15 @@ function VehiclePage(){
 
         })
     }, [])
+     const tableStyle = {
+      width: "80%",
+      margin: "20px 10%"
+    }
     return(
         <div>
-            {vehicles.map((vehicle)=>{
-          return(<div>
-        <Card className="card" style={{ width: '80rem' }}>
+            {/* {vehicles.map((vehicle)=>{
+          return(<div className="card">
+        <Card className="card">
           <Card.Body>
             <Card.Title> Model:   {vehicle.model}</Card.Title>
             <Card.Text> Year of Manufacture:   {vehicle.manufacture_year}</Card.Text>
@@ -28,13 +34,47 @@ function VehiclePage(){
             <Card.Text> Vehicle insurance:    {vehicle.vehicle_insurance}</Card.Text>
             <Card.Text>Owner:  {vehicle.driver_id}</Card.Text>
             <Card.Text>Garage serviced:   {vehicle.garage_id}</Card.Text>
-            <Card.Text>Vehicle Registratio:   {vehicle.vehicle_registration}</Card.Text>
+            <Card.Text>Vehicle Registration:   {vehicle.vehicle_registration}</Card.Text>
           </Card.Body>
         </Card>
           </div>
 
           )
-        })}
+        })} */}
+             <Table style={tableStyle}>
+      <TableHead>
+        <TableRow style={{ fontSize: "18px" }}>
+          <TableCell>Name</TableCell>
+          <TableCell>Year of Manufacture</TableCell>
+          <TableCell>Last Service</TableCell>
+          <TableCell>Next Service</TableCell>
+          <TableCell>Catalytic Conveter</TableCell>
+          <TableCell>Vehicle Insurance</TableCell>
+          <TableCell>Owner</TableCell>
+          <TableCell>Garage Serviced</TableCell>
+          <TableCell>Vehicle Registration</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {vehicles.map((vehicle) => (
+          <TableRow>
+            <TableCell>{vehicle.model}</TableCell>
+            <TableCell>{vehicle.manufacture_year}</TableCell>
+            <TableCell>{vehicle.last_service}</TableCell>
+            <TableCell>{vehicle.next_service}</TableCell>
+            <TableCell>{vehicle.catlytic_converter}</TableCell>
+            <TableCell>{vehicle.vehicle_insurance}</TableCell>
+            <TableCell>{vehicle.driver_id}</TableCell>
+            <TableCell>{vehicle.garage_id}</TableCell>
+            <TableCell>{vehicle.vehicle_registration}</TableCell>
+            <TableCell>
+
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+
 
 
         </div>
