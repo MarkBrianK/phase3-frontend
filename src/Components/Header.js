@@ -9,6 +9,7 @@ function Header(){
                 <NavLink to = '/drivers' exact="true" style={{textDecoration : "none", color :"white", fontSize:20}}>Driver</NavLink>
                 <NavLink to = '/garages' exact="true" style={{textDecoration : "none", color :"white", fontSize:20}}>Garage</NavLink>
                 <NavLink to = '/vehicles' exact="true" style={{textDecoration : "none", color :"white", fontSize:20}}>Vehicle</NavLink>
+
             </div>
         </div>
     )

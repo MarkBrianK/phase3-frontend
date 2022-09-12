@@ -56,7 +56,7 @@
   grid-template-columns: auto;
   height: 90px;
   font-size: larger;
-  background-color: black;
+  background-color: rgb(14, 12, 12);
   color: beige;
 
 }
@@ -118,4 +118,5 @@
   margin-left: 900px;
   margin-top: 50px;
 }
+
 
