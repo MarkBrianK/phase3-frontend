@@ -7,12 +7,14 @@ import "../App.css"
 
 function VehiclePage(){
     const [vehicles, setVehicle] = useState([])
+    const [vehicleSearch, setVehicleSearch] = useState([])
     useEffect(()=> {
         fetch("https://backendapi3.herokuapp.com/vehicles")
         .then((res)=>  res.json())
         .then((data)=>{
             console.log(data)
             setVehicle(data)
+            setVehicleSearch(data)
 
         })
     }, [])
@@ -20,8 +22,29 @@ function VehiclePage(){
       width: "80%",
       margin: "20px 10%"
     }
+    function searchHandle(value) {
+      const searchedVehicles = vehicleSearch.filter(
+        (vec) =>
+         vec.vehicle_registration.toLowerCase().includes(value.toLowerCase())
+      );
+      setVehicle(searchedVehicles);
+    }
+
+    const Search = (
+      <div className="container3">
+      <input
+        onChange={(event) => searchHandle(event.target.value)}
+        type="text"
+        placeholder="Search vehicle"
+      />
+      <button type="submit" className="btnsearch ">
+        <i className="icon-search"></i>Search
+      </button>
+      </div>
+    )
     return(
         <div>
+          {Search}
             {/* {vehicles.map((vehicle)=>{
           return(<div className="card">
         <Card className="card">
