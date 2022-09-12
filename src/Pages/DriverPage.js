@@ -6,12 +6,14 @@ import "../App.css"
 
 function DriverPage(){
     const [drivers, setDriver] = useState([])
+    const [driverSearch, setDriverSearch] = useState([])
     useEffect(()=> {
         fetch("https://backendapi3.herokuapp.com/drivers")
         .then((res)=>  res.json())
         .then((data)=>{
             console.log(data)
             setDriver(data)
+            setDriverSearch(data)
 
         })
     }, [])
@@ -19,9 +21,30 @@ function DriverPage(){
       width: "80%",
       margin: "20px 10%"
     }
+    function searchHandle(value) {
+      const searchedDrivers = driverSearch.filter(
+        (owner) =>
+         owner.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setDriver(searchedDrivers);
+    }
+
+    const Search = (
+      <div className="container3">
+      <input
+        onChange={(event) => searchHandle(event.target.value)}
+        type="text"
+        placeholder="Search Driver"
+      />
+      <button type="submit" className="btnsearch ">
+        <i className="icon-search"></i>Search
+      </button>
+      </div>
+    )
 
     return(
         <div>
+           {Search}
             {/* {drivers.map((driver)=>{
           return(<div className="card">
         <Card>
